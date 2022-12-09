@@ -4,7 +4,7 @@ const typeDefs = gql`
 
 type Post {
     id: ID
-    name: String 
+    name: String
     email: String
     password: String
 
@@ -24,8 +24,8 @@ input PostInput {
 
 type Mutation {
     createPost(post: PostInput): Post
-    updatePost(id: ID): String
-    deletePost(id: ID, post: PostInput): Post
+    updatePost(id: ID, post: PostInput): Post
+    deletePost(id: ID ): Post
 }
 `
 module.exports = typeDefs;
